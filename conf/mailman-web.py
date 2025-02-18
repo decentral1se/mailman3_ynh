@@ -183,6 +183,17 @@ SOCIALACCOUNT_PROVIDERS = {
     #},
 }
 
+# Asynchronous tasks
+#
+#: Django Q connection parameters.
+Q_CLUSTER = {
+    'retry': 360,
+    'timeout': 300,
+    'save_limit': 100,
+    'orm': 'default',
+    'poll': 5,
+}
+
 # On a production setup, setting COMPRESS_OFFLINE to True will bring a
 # significant performance improvement, as CSS files will not need to be
 # recompiled on each requests. It means running an additional "compress"
